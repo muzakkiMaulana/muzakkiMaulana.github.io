@@ -8,7 +8,8 @@ class Nav extends Component {
             text : [
                 1
             ],
-            load_Api: load_Api
+            load_Api: load_Api,
+            data: false,
         }
   }
  
@@ -19,7 +20,7 @@ class Nav extends Component {
     //     { name: "Redmi Note X", price: 5000000, discount: 42 },
     //   ];      
      
-    console.log(this.state);
+    console.log('load');
   }
 
 
@@ -29,7 +30,8 @@ class Nav extends Component {
       arr.push(count)
 
     this.setState({
-      text:arr
+      text:arr,
+      data: count > 3
     })
     console.log(this.state.load_Api);
   }
@@ -42,6 +44,12 @@ class Nav extends Component {
               {this.state.text.map((data, i) =>{
                   return data
               })}
+              <div>
+                  apakah ganjil ? 
+              {
+                  this.state.data ? 'tidak' : 'iya' 
+              }
+              </div>
             <button onClick={() => this.goPremium()}>
               Go Premium
             </button>
