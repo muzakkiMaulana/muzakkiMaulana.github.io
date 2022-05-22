@@ -43,45 +43,33 @@ class Nav extends Component {
   }
 
   render() {
-    // console.log(this.phoneData);
-    // return (
-    //     <div>
-    //         {this.state.text.map((data, i) =>{
-    //             return data
-    //         })}
-    //         <div>
-    //             apakah ganjil ?
-    //         {
-    //             this.state.data ? 'tidak' : 'iya'
-    //         }
-    //         </div>
-    //       <button onClick={() => this.goPremium()}>
-    //         Go Premium
-    //       </button>
-    //     </div>
-    // );
+  
 
     if (!this.state.data) {
       return <div>loading</div>;
     }
-    console.log(this.state.data);
 
+
+    const listNavbar = this.state.data.map((data, i) => {
+      const active = (i == 2 ? "active": "");
+      if(i < 3){
+        return (
+         <li key={i}>
+           <a className={active}>{data.name}</a>
+         </li>
+        );
+      }
+    });
+    
     return (
       <nav className="navbar">
-        <div className="container">
+        <div className="container mx-auto">
+          <div className="text-lg">
+            Muzakki Maulana S
+          </div>
           <div className="list-menu">
             <ul>
-              {this.state.data.map((data, i) => {
-                const active = (i == 4 ? "active": "");
-                console.log(active, i);
-                if(i > 3){
-                  return (
-                   <li>
-                     <a className={active}>{data.name}</a>
-                   </li>
-                  );
-                }
-              })}
+              {listNavbar}
             </ul>
           </div>
         </div>

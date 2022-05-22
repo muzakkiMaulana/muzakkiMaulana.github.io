@@ -4,73 +4,38 @@
 @tailwind utilities;
 
 @layer components {
-    .btn-primary {
-      @apply 
-      py-2 
-      px-4
-      bg-blue-500 
-      text-white 
-      font-semibold 
-      rounded-lg 
-      shadow-md 
-      hover:bg-blue-700 
-      focus:outline-none 
-      focus:ring-2 
-      focus:ring-blue-400 
-      focus:ring-opacity-75
-    }
+  .btn-primary {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75
+  }
 
-    /* .navbar{
+  /* .navbar{
         @apply flex flex-nowrap py-2 px-4 bg-blue-500 text-white justify-center overflow-x-auto
     } */
 
-    .navbar {
-        @apply 
-        px-2 
-        py-1 
-        bg-black 
-        text-white
-    }
+  .navbar {
+    @apply px-2 py-1 bg-black text-white
+  }
 
-    .navbar .container {
-        @apply 
-        flex 
-        flex-wrap 
-        justify-between 
-        items-center 
-        px-2
-    }
+  .navbar .container {
+    @apply flex flex-wrap justify-between items-center px-2
+  }
 
-    .navbar .list-menu ul {
-        @apply flex flex-row
-    }
+  .navbar .list-menu ul {
+    @apply flex flex-row
+  }
 
-    .navbar .list-menu li {
-        @apply my-3
-    }
-    .navbar .list-menu a {
-        @apply 
-        mx-3 
-        pb-1 
-        /* border-b-2  */
-        font-medium
-    }
+  .navbar .list-menu li {
+    @apply my-3
+  }
 
-    /* .navbar .list-menu a.active {
-        left:0;
-        right:0;
-        background:red;
-        height:1px;
-        border-radius:20px;
+  .navbar .list-menu a {
+    @apply mx-3 pb-1
+    /* border-b-2  */
+    font-medium
+  }
 
-        @apply 
-        before:content-[''] */
-        /* py-5 */
-        
-    /* } */
-
-    .navbar .list-menu a.active::after {
-        /* left:0;
+  .navbar .list-menu a.active::after {
+    /* left:0;
         right:0;
         background:red;
         height:20px;
@@ -78,46 +43,68 @@
 
         @apply 
         before:content-[''] */
-        /* py-5 */
-        content:'';
-  /* position:absolute; */
-  /* bottom:0;
+    /* py-5 */
+    content: '';
+    /* position:absolute; */
+    /* bottom:0;
   left:0;
   right:0; */
-  background:red;
-  height:20px;
-  border-radius:0 10px 10px 0;
-
-        
-    }
-    
-    .navbar .list-menu {
-        
-        @apply overflow-x-auto whitespace-nowrap
-    }
+    background: red;
+    height: 20px;
+    border-radius: 0 10px 10px 0;
 
 
-::-webkit-scrollbar {
+  }
+
+  .navbar .list-menu {
+
+    @apply flex overflow-x-auto whitespace-nowrap justify-between
+  }
+
+
+  ::-webkit-scrollbar {
     height: 5px;
   }
-  
+
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #f1f1f1;
   }
 
-    /* .navbar .list-menu ul {
-        @apply flex flex-row 
-    } */
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
   }
-  
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+
+  .hero {}
+
+  .message .message-svg {
+    width: 2rem
+  }
+
+
+  .message .message-list svg {
+    width: 26px;
+  }
+
+  /* 
+  .message-list .icon-container\:bg-sky-700:hover
+  :hover+.message-list .icon-container .icon-arrow {
+    @apply block
+  } */
+
+  .block-i {
+    display: block !important;
+  }
+
+  .flex-i {
+    display: flex !important;
+  }
+}
